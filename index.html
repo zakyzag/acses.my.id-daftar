@@ -3,36 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pendaftaran Internet</title>
 
-  <link rel="stylesheet" href="daftar.css">
+  <title>Pendaftaran asrlink</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
 
-  <div class="card">
+  <div class="form-card">
 
-    <h1>Pendaftaran Internet</h1>
-    <p>Isi data dengan benar</p>
+    <h1>Pendaftaran Instalasi Internet</h1>
+
+    <p class="subtitle">
+      Lengkapi data berikut untuk pemasangan internet
+    </p>
 
     <form id="daftarForm">
 
-      <input type="text" id="nama" placeholder="Nama Lengkap" required>
+      <div class="input-group">
+        <label>Nama Lengkap</label>
+        <input type="text" id="nama" required>
+      </div>
 
-      <input type="text" id="hp" placeholder="Nomor WhatsApp" required>
+      <div class="input-group">
+        <label>Nomor WhatsApp</label>
+        <input type="text" id="hp" required>
+      </div>
 
-      <textarea id="alamat" placeholder="Alamat Lengkap"></textarea>
+      <div class="input-group">
+        <label>Alamat Lengkap</label>
+        <textarea id="alamat" required></textarea>
+      </div>
 
-      <select id="paket">
-        <option value="20 Mbps">20 Mbps</option>
-        <option value="30 Mbps">30 Mbps</option>
-        <option value="50 Mbps">50 Mbps</option>
-        <option value="100 Mbps">100 Mbps</option>
-      </select>
+      <div class="input-group">
+        <label>Link Lokasi Google Maps</label>
+        <input type="text" id="maps">
+      </div>
+
+      <div class="input-group">
+        <label>Pilih Paket Internet</label>
+
+        <select id="paket">
+
+          <option>20 Mbps</option>
+          <option>30 Mbps</option>
+          <option>50 Mbps</option>
+          <option>100 Mbps</option>
+
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Catatan Tambahan</label>
+        <textarea id="catatan"></textarea>
+      </div>
 
       <button type="submit">
-        Daftar Sekarang
+        Kirim Pendaftaran
       </button>
 
     </form>
@@ -45,7 +74,7 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
 
 <script src="firebase.js"></script>
-<script src="daftar.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
