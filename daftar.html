@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Internet</title>
+
+  <link rel="stylesheet" href="daftar.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="card">
+
+    <h1>Pendaftaran Internet</h1>
+    <p>Isi data dengan benar</p>
+
+    <form id="daftarForm">
+
+      <input type="text" id="nama" placeholder="Nama Lengkap" required>
+
+      <input type="text" id="hp" placeholder="Nomor WhatsApp" required>
+
+      <textarea id="alamat" placeholder="Alamat Lengkap"></textarea>
+
+      <select id="paket">
+        <option value="20 Mbps">20 Mbps</option>
+        <option value="30 Mbps">30 Mbps</option>
+        <option value="50 Mbps">50 Mbps</option>
+        <option value="100 Mbps">100 Mbps</option>
+      </select>
+
+      <button type="submit">
+        Daftar Sekarang
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+<script src="firebase.js"></script>
+<script src="daftar.js"></script>
+
+</body>
+</html>
