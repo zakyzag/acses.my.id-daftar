@@ -38,8 +38,24 @@
       </div>
 
       <div class="input-group">
-        <label>Link Lokasi Google Maps</label>
-        <input type="text" id="maps">
+
+  <label>Lokasi Rumah</label>
+
+  <input
+    type="text"
+    id="maps"
+    placeholder="Lokasi otomatis muncul..."
+    readonly
+  >
+
+  <button
+    type="button"
+    class="lokasi-btn"
+    onclick="ambilLokasi()"
+  >
+    📍 Ambil Lokasi Saya
+  </button>
+
       </div>
 
       <div class="input-group">
