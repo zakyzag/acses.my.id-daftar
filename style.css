@@ -86,3 +86,8 @@ button{
 button:hover{
   transform:scale(1.02);
 }
+
+.lokasi-btn{
+  margin-top:10px;
+  background:linear-gradient(45deg,#0ea5e9,#2563eb);
+}
