@@ -1,34 +1,34 @@
-function ambilLokasi(){
+function ambilLokasi() {
 
-  if(navigator.geolocation){
-
-    navigator.geolocation.getCurrentPosition(
-
-      function(position){
-
-        const lat = position.coords.latitude;
-        const lng = position.coords.longitude;
-
-        const link =
-        `https://www.google.com/maps?q=${lat},${lng}`;
-
-        document.getElementById("maps").value = link;
-
-      },
-
-      function(){
-
-        alert("Lokasi gagal diambil");
-
-      }
-
-    );
-
-  }else{
-
-    alert("Browser tidak mendukung lokasi");
-
+  if (!navigator.geolocation) {
+    alert("Browser tidak mendukung GPS");
+    return;
   }
+
+  navigator.geolocation.getCurrentPosition(
+
+    (position) => {
+
+      const lat = position.coords.latitude;
+      const lng = position.coords.longitude;
+
+      const mapsLink =
+        `https://maps.google.com/?q=${lat},${lng}`;
+
+      document.getElementById("maps").value =
+        mapsLink;
+
+    },
+
+    (error) => {
+
+      alert("Gagal mengambil lokasi");
+
+      console.log(error);
+
+    }
+
+  );
 
 }
 
