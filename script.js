@@ -9,6 +9,7 @@ daftarForm.addEventListener("submit", (e) => {
     hp: document.getElementById("hp").value,
     alamat: document.getElementById("alamat").value,
     paket: document.getElementById("paket").value,
+    maps: document.getELementById("maps").value
     status: "Menunggu"
   };
 
